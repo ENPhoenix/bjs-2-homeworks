@@ -1,4 +1,7 @@
 function Student(name, gender, age) {
+    this.name = name;
+    this.gender = gender;
+    this.age = age; 
     this.marks = [];
 }
 
@@ -38,3 +41,5 @@ let student2 = new Student("Артём", "мужской", 25);
 student2.setSubject("Geometry");
 student2.exclude('плохая учёба')
 console.log(student2)
+
+
