@@ -85,10 +85,10 @@ class DetectiveBook extends Book {
 
 
 const picknick = new FantasticBook(
-    "Аркадий и Борис Стругацкие",
     "Пикник на обочине",
     1972,
-    168
+    168,
+    "Аркадий и Борис Стругацкие"
   );
   
   console.log(picknick.author); //"Аркадий и Борис Стругацкие"
