@@ -61,7 +61,7 @@ class Book extends PrintEditionItem {
 
 class NovelBook extends Book {
     constructor(author, name, releaseDate, pagesCount) {
-        super(name, releaseDate, pagesCount, author);
+        super(author, name, releaseDate, pagesCount);
         this.type = "novel";
     }
 }
@@ -69,7 +69,7 @@ class NovelBook extends Book {
 
 class FantasticBook extends Book {
     constructor(author, name, releaseDate, pagesCount) {
-        super(name, releaseDate, pagesCount, author);
+        super(author, name, releaseDate, pagesCount);
         this.type = "fantastic"; 
     }
 }
@@ -77,7 +77,7 @@ class FantasticBook extends Book {
 
 class DetectiveBook extends Book {
     constructor(author, name, releaseDate, pagesCount) {
-        super(name, releaseDate, pagesCount, author); 
+        super(author, name, releaseDate, pagesCount); 
         this.type = "detective"; 
     }
 }
