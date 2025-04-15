@@ -30,9 +30,8 @@ class Triangle {
     }
 
     get perimeter() {
-        return this.a + this.b + this.c;
+        return (this.a + this.b + this.c).toFixed(3);
     }
-
 
     get area() {
         const s = this.perimeter / 2;
