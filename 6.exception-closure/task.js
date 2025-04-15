@@ -12,10 +12,9 @@ function validateCount(value) {
     try {
         return parseCount(value);
     } catch (error) {
-        return error.message;
+        return error;
     }
 }
-
 
 //Задание 2
 
@@ -34,11 +33,13 @@ class Triangle {
         return this.a + this.b + this.c;
     }
 
+
     get area() {
         const s = this.perimeter / 2;
-        return Math.sqrt(s * (s - this.a) * (s - this.b) * (s - this.c)).toFixed(3);
+        return Math.sqrt(s * (s - this.a) * (s - this.b) * (s - this.c));
     }
 }
+
 
 function getTriangle(a, b, c) {
     try {
