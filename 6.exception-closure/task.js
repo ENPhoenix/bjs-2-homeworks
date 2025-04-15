@@ -30,12 +30,13 @@ class Triangle {
     }
 
     get perimeter() {
-        return (this.a + this.b + this.c).toFixed(3);
+        return this.a + this.b + this.c; 
     }
 
     get area() {
         const s = this.perimeter / 2;
-        return Math.sqrt(s * (s - this.a) * (s - this.b) * (s - this.c)).toFixed(3);
+        const areaValue = Math.sqrt(s * (s - this.a) * (s - this.b) * (s - this.c));
+        return areaValue.toFixed(3); 
     }
 }
 
