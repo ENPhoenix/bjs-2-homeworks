@@ -73,8 +73,8 @@ class AlarmClock {
 
     //сбрасывает возможность запуска всех звонков
     resetAllCalls() {
-        this.calls.forEach(call => {
-            call.canCall = true;
+        this.alarmCollection.forEach(alarm => {
+            alarm.canCall = true;
         });
         console.log("Все звонки сброшены.");
     }
