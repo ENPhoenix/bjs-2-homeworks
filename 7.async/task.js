@@ -82,10 +82,11 @@ class AlarmClock {
 
     //удаляет все звонки
     clearAlarms() {
-        this.alarmCollection.forEach(alarm => alarm.stop());
-        this.alarmCollection = [];
+        this.stop();
+        this.alarmCollection = []; 
         console.log("Все будильники удалены.");
     }
+    
 
 }
 
