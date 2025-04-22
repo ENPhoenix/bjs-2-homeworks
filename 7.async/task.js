@@ -17,12 +17,11 @@ class AlarmClock {
             console.warn('Уже присутствует звонок на это же время');
             return;
         }
-        const alarm = {
+        this.alarmCollection.push({
             time: time,
             callback: callback,
-            canCall: true 
-        };
-        this.alarmCollection.push(alarm);
+            canCall: true
+        });
     }
 
     // удаляет звонки по определённому времени
@@ -41,8 +40,7 @@ class AlarmClock {
 
     //запускает будильник
     start() {
-        if (this.intervalId) {
-            console.warn("Будильник уже запущен");
+        if (this.intervalId !== null) {
             return;
         }
         
@@ -61,23 +59,16 @@ class AlarmClock {
 
     //останавливает выполнение интервала будильника
     stop() {
-        if (this.intervalId !== null) { 
-            clearInterval(this.intervalId);
-            this.intervalId = null;
-            console.log("Будильник остановлен.");
-        } else {
-            console.log("Будильник уже остановлен.");
-        }
-    }   
+        clearInterval(this.intervalId);
+        this.intervalId = null;
+    }  
     
-
 
     //сбрасывает возможность запуска всех звонков
     resetAllCalls() {
         this.alarmCollection.forEach(alarm => {
             alarm.canCall = true; 
         });
-        console.log("Все звонки сброшены.");
     }
 
 
@@ -85,7 +76,6 @@ class AlarmClock {
     clearAlarms() {
         this.stop();
         this.alarmCollection = []; 
-        console.log("Все будильники удалены.");
     }
 }
 
