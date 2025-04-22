@@ -17,11 +17,12 @@ class AlarmClock {
             console.warn('Уже присутствует звонок на это же время');
             return;
         }
-        this.alarmCollection.push({
+        const alarm = {
             time: time,
             callback: callback,
-            canCall: true
-        });
+            canCall: true 
+        };
+        this.alarmCollection.push(alarm);
     }
 
     // удаляет звонки по определённому времени
@@ -74,7 +75,7 @@ class AlarmClock {
     //сбрасывает возможность запуска всех звонков
     resetAllCalls() {
         this.alarmCollection.forEach(alarm => {
-            alarm.canCall = true;
+            alarm.canCall = true; 
         });
         console.log("Все звонки сброшены.");
     }
@@ -86,7 +87,5 @@ class AlarmClock {
         this.alarmCollection = []; 
         console.log("Все будильники удалены.");
     }
-    
-
 }
 
